@@ -1,0 +1,9 @@
+export { default as PersonalInfo } from "./PersonalInfo";
+export { default as Quote } from "./Quote";
+export { default as Techs } from "./Techs";
+export { default as Projects } from "./Projects";
+export { default as Experience } from "./Experience";
+export { default as Hobbies } from "./Hobbies";
+export { default as Passion } from "./Passion";
+export { default as Links } from "./Links";
+export { default as Socials } from "./Socials";
