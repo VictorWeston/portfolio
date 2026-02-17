@@ -5,6 +5,10 @@ const FilterContext = createContext();
 
 export function FilterProvider({ children }) {
   const [selectedTechs, setSelectedTechs] = useState([]);
+  const [activeProjectId, setActiveProjectId] = useState(null);
+
+  const openProject = (projectId) => setActiveProjectId(projectId);
+  const closeProject = () => setActiveProjectId(null);
 
   const toggleTech = (techId) => {
     setSelectedTechs((prev) =>
@@ -48,6 +52,9 @@ export function FilterProvider({ children }) {
     allTechs: techs,
     techsByType,
     techTypes,
+    activeProjectId,
+    openProject,
+    closeProject,
   };
 
   return (

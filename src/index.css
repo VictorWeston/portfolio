@@ -438,6 +438,23 @@ a:hover {
   flex: 1;
 }
 
+.project-modal__content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.project-modal__content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.project-modal__content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+
+.project-modal__content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
 .project-modal__header {
   display: flex;
   align-items: center;
@@ -552,6 +569,28 @@ a:hover {
 .project-modal__link:hover {
   background: var(--accent-color);
   color: var(--bg-primary);
+}
+
+/* Cross-reference links */
+.cross-ref {
+  color: var(--accent-color);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
+  transition: all 0.2s ease;
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+.cross-ref:hover {
+  text-decoration-style: solid;
+  background: rgba(59, 130, 246, 0.15);
+}
+
+.cross-ref:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
 }
 
 /* Filter bar base */

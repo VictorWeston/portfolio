@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FilterProvider } from "./context/FilterContext";
 import { FilterBar } from "./components/common";
+import ProjectModal from "./components/common/ProjectModal";
 import {
   PersonalInfo,
   Quote,
@@ -70,6 +71,7 @@ function App() {
           )}
         </main>
       </div>
+      <ProjectModal />
     </FilterProvider>
   );
 }

@@ -1,6 +1,7 @@
 import { experience, techs } from "../../data";
 import { useFilter } from "../../context/FilterContext";
 import Icon from "../common/Icon";
+import CrossRefText from "../common/CrossRefText";
 
 function Experience() {
   const { selectedTechs } = useFilter();
@@ -21,7 +22,7 @@ function Experience() {
               <div className="experience-card__duration">
                 {exp.duration.start} - {exp.duration.end || "Present"}
               </div>
-              <p className="experience-card__description">{exp.description}</p>
+              <CrossRefText text={exp.description} className="experience-card__description" />
 
               {techObjects.length > 0 && (
                 <div className="experience-card__techs">

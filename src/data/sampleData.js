@@ -29,8 +29,6 @@ export const techs = [
   { id: "tech-react-native", name: "React Native", type: "frontend", icon: "/icons/react.png" },
   { id: "tech-react-flow", name: "React Flow", type: "frontend", icon: "/icons/react.png" },
   { id: "tech-plasmo", name: "Plasmo", type: "frontend", icon: "/icons/plasmo.png" },
-  { id: "tech-tkinter", name: "Tkinter", type: "frontend", icon: "/icons/python.png" },
-  { id: "tech-html", name: "HTML", type: "frontend", icon: "/icons/html.png" },
   
   // Backend
   { id: "tech-node", name: "Node.js", type: "backend", icon: "/icons/nodejs.png" },
@@ -38,11 +36,8 @@ export const techs = [
   
   // Database
   { id: "tech-mongodb", name: "MongoDB", type: "database", icon: "/icons/mongodb.png" },
-  { id: "tech-mongodb-atlas", name: "MongoDB Atlas", type: "database", icon: "/icons/mongodb.png" },
   { id: "tech-postgres", name: "PostgreSQL", type: "database", icon: "/icons/postgresql.png" },
   { id: "tech-redis", name: "Redis", type: "database", icon: "/icons/redis.png" },
-  { id: "tech-pgadmin", name: "PGAdmin", type: "database", icon: "/icons/postgresql.png" },
-  { id: "tech-mongo-compass", name: "Mongo Compass", type: "database", icon: "/icons/mongodb.png" },
   
   // Deployment
   { id: "tech-docker", name: "Docker", type: "deployment", icon: "/icons/docker.png" },
@@ -62,11 +57,11 @@ export const techs = [
   { id: "tech-telecrm", name: "TeleCRM", type: "integrations", icon: "/icons/telecrm.png" },
   { id: "tech-shopify", name: "Shopify", type: "integrations", icon: "/icons/shopify.png" },
   { id: "tech-calendly", name: "Calendly", type: "integrations", icon: "/icons/calendly.png" },
-  { id: "tech-google", name: "Google", type: "integrations", icon: "/icons/google.png" },
-  { id: "tech-genai", name: "GenAI", type: "integrations", icon: "/icons/genai.png" },
+  { id: "tech-google", name: "Google", type: "integrations", icon: "/icons/Google Cloud.png" },
+  { id: "tech-genai", name: "GenAI", type: "integrations", icon: "/icons/gemini.png" },
   { id: "tech-tally", name: "Tally", type: "integrations", icon: "/icons/tally.png" },
   { id: "tech-wordpress", name: "WordPress", type: "integrations", icon: "/icons/wordpress.png" },
-  { id: "tech-razorpay", name: "Razorpay", type: "integrations", icon: "/icons/razorpay.png" },
+  { id: "tech-razorpay", name: "Razorpay", type: "integrations", icon: "/icons/razor.png" },
 ];
 
 // Tech type labels for display
@@ -111,7 +106,7 @@ export const projects = [
       {
         name: "Integration: Razorpay",
         img: "",
-        description: "Razorpay web payment gateway integration for premium feature purchases and subscription management within the platform",
+        description: "Razorpay web payment gateway integration for premium feature purchases and subscription management within the platform, it uses our @[Admark Payment Processor GO](project-6) as the backend payment processing service",
         techs: ["tech-node", "tech-razorpay"],
       },
     ],
@@ -122,19 +117,19 @@ export const projects = [
     type: "live",
     img: "",
     description: "Enterprise-grade Verified WhatsApp(Blue tick) management platform with high-throughput campaigning, advanced chatbot flow builder, template management, Live Chat, multiple integrations, full observability stack.",
-    techs: ["tech-js", "tech-ts", "tech-react", "tech-react-flow", "tech-node", "tech-express", "tech-mongodb", "tech-redis", "tech-grafana", "tech-prometheus", "tech-loki", "tech-docker", "tech-kubernetes", "tech-argocd", "tech-gitops", "tech-ghcr"],
+    techs: ["tech-js", "tech-react", "tech-react-flow", "tech-node", "tech-express", "tech-mongodb", "tech-postgres", "tech-redis", "tech-grafana", "tech-prometheus", "tech-loki", "tech-telecrm", "tech-shopify", "tech-calendly", "tech-google", "tech-tally", "tech-wordpress"],
     links: [],
     features: [
       {
         name: "High Threshold Campaigning & Webhook Handling",
         img: "",
         description: "High-throughput WhatsApp campaign engine handling 80 msg/s per campaign (META limit) and 10k+ webhooks/s for delivery and response tracking. Built with parallel processing and Redis caching on containerized Kubernetes infrastructure.",
-        techs: ["tech-node", "tech-redis", "tech-mongodb", "tech-docker", "tech-kubernetes"],
+        techs: ["tech-node", "tech-redis", "tech-mongodb"],
       },
       {
         name: "Feature Rich Chatbot Flow Builder",
         img: "",
-        description: "Advanced visual chatbot flow builder with branching, conditions, rich media support and all supported WhatsApp message types, built using React Flow for intuitive drag-and-drop interface. An old election bot feature was removed due to Meta policy changes which had voters data in a PostgreSQL database.",
+        description: "Advanced visual chatbot flow builder with branching, conditions, rich media support and all supported WhatsApp message types, built using React Flow for intuitive drag-and-drop interface. An old election bot feature was removed due to Meta policy changes which had @[voters data](project-5) in a PostgreSQL database.",
         techs: ["tech-react", "tech-react-flow", "tech-js", "tech-postgres"],
       },
       {
@@ -159,7 +154,7 @@ export const projects = [
         name: "Observability Stack",
         img: "",
         description: "Full observability with Grafana dashboards, Prometheus metrics, and Loki log aggregation. Configured Prometheus to collect live app metrics (webhooks rate, api calls rate, errors) and Loki for general and webhook logs. Built custom Grafana dashboards with transformed webhook log data displayed as queryable tables.",
-        techs: ["tech-grafana", "tech-prometheus", "tech-loki", "tech-node", "tech-kubernetes"],
+        techs: ["tech-grafana", "tech-prometheus", "tech-loki", "tech-node"],
       },
     ],
   },
@@ -169,7 +164,7 @@ export const projects = [
     type: "live",
     img: "",
     description: "Customer relationship management system with quotation generation, Google Maps integration, call tracking, lead management, organization management and user monitoring.",
-    techs: ["tech-js", "tech-react", "tech-node", "tech-express", "tech-mongodb", "tech-google"],
+    techs: ["tech-js", "tech-react", "tech-node", "tech-express", "tech-mongodb", "tech-google", "tech-portainer"],
     links: [],
     features: [
       {
@@ -187,7 +182,7 @@ export const projects = [
       {
         name: "Call History Tracking",
         img: "",
-        description: "Call history tracking service that receives call logs via API from our mobile app, stores them in MongoDB, and provides a dashboard for monitoring call activity and performance metrics.",
+        description: "Call history tracking service that receives call logs via API from @[Admark CRM Mobile App](project-4), stores them in MongoDB, and provides a dashboard for monitoring call activity and performance metrics.",
         techs: ["tech-node", "tech-mongodb"],
       },
     ],
@@ -198,13 +193,13 @@ export const projects = [
     type: "live",
     img: "",
     description: "Mobile CRM application with quotation generation, automated lead assignment, and comprehensive tracking for call, location, and screen time.",
-    techs: ["tech-js", "tech-react-native", "tech-node", "tech-express", "tech-mongodb"],
+    techs: ["tech-js", "tech-react-native", "tech-node", "tech-express", "tech-mongodb", "tech-genai"],
     links: [],
     features: [
       {
         name: "Quotation Generator",
         img: "",
-        description: "Mobile-optimized version of quotation builder for on-the-go quote creation and sharing",
+        description: "Mobile-optimized version of quotation builder from @[Admark CRM](project-3) for on-the-go quote creation and sharing",
         techs: ["tech-react-native", "tech-node"],
       },
       {
@@ -249,7 +244,7 @@ export const projects = [
     name: "Admark Payment Processor GO",
     type: "live",
     img: "",
-    description: "High-performance payment processing service built in Go with Razorpay integration.",
+    description: "High-performance payment processing service built in Go with Razorpay integration. Had implementations in in @[Multi-Whatsapp](project-1) and @[Verified WhatsApp](project-2) for handling all payment processing tasks including premium feature purchases and subscription management.",
     techs: ["tech-go", "tech-razorpay"],
     links: [],
     features: [
@@ -307,15 +302,15 @@ export const projects = [
     name: "Neta & Business Design – Admark",
     type: "live",
     img: "",
-    description: "Mobile app for quick political banner creation with ready-to-use designs and frames, plus URL-based digital business cards and product catalogs for easy sharing. Backend powered by Node.js with AI background removal.",
-    techs: ["tech-python", "tech-js", "tech-react", "tech-node", "tech-express"],
+    description: "Mobile app for quick political banner creation with ready-to-use designs and frames, plus URL-based digital business cards and product catalogs for easy sharing. Backend powered by Node.js and Python for background removal.",
+    techs: ["tech-python", "tech-js", "tech-react", "tech-node", "tech-express", "tech-ts", "tech-mongodb"],
     links: [],
     features: [
       {
         name: "Political Banner Creator",
         img: "",
         description: "One-click political banner generation using pre-built designs and customizable frames. Users select a template, apply their profile photo with auto background removal, and get a ready-to-share banner instantly.",
-        techs: ["tech-react", "tech-node"],
+        techs: ["tech-react", "tech-node", "tech-ts", "tech-mongodb"],
       },
       {
         name: "Background Removal Service (REMBG)",
@@ -327,13 +322,13 @@ export const projects = [
         name: "Digital Business Card & Product Catalog",
         img: "",
         description: "URL-based digital business cards and product catalogs hosted over HTTPS. Users create and share their business profile and products through a simple shareable link for easy promotion.",
-        techs: ["tech-node", "tech-js", "tech-react"],
+        techs: ["tech-node", "tech-ts", "tech-react"],
       },
       {
         name: "Backend For Editors",
         img: "",
         description: "Dedicated backend service managing designs, frames, templates, and user assets for the banner editor and catalog generator",
-        techs: ["tech-node", "tech-express"],
+        techs: ["tech-node", "tech-express", "tech-js"],
       },
     ],
   },
@@ -349,13 +344,13 @@ export const projects = [
       {
         name: "Migrated Projects",
         img: "",
-        description: "Containerized and migrated Verified WhatsApp, Admark CRM, Admark Website, and Bulk-SMS Panel to Kubernetes with zero-downtime deployments via ArgoCD and GitOps CI/CD pipelines.",
+        description: "Containerized and migrated @[Verified WhatsApp](project-2), @[Admark CRM](project-3), Admark Website, and @[Bulk-SMS Panel](project-10) to Kubernetes with zero-downtime deployments via ArgoCD and GitOps CI/CD pipelines.",
         techs: ["tech-docker", "tech-kubernetes", "tech-argocd", "tech-gitops", "tech-ghcr", "tech-nginx"],
       },
       {
         name: "Cloud Storage Migration",
         img: "",
-        description: "Migrated backend file storage from Multer disk storage to centralized GO Cloud Storage service, ensuring a single source of truth for files regardless of which Kubernetes node or pod the service is deployed on.",
+        description: "Migrated backend file storage from Multer disk storage to centralized @[GO Cloud Storage](project-7) service, ensuring a single source of truth for files regardless of which Kubernetes node or pod the service is deployed on.",
         techs: ["tech-go", "tech-kubernetes", "tech-docker"],
       },
       {
@@ -373,13 +368,13 @@ export const projects = [
       {
         name: "Prometheus",
         img: "",
-        description: "Prometheus metrics collection and alerting across the Kubernetes cluster",
+        description: "Prometheus metrics collection and alerting across the Kubernetes cluster. Project @[Verified WhatsApp](project-2) has custom metrics for webhook rates, api call rates, and error rates.",
         techs: ["tech-prometheus"],
       },
       {
         name: "Loki",
         img: "",
-        description: "Log aggregation with Loki for centralized logging across all services",
+        description: "Log aggregation with Loki for centralized logging across all services. Project @[Verified WhatsApp](project-2) has custom log streams for webhook events and API calls.",
         techs: ["tech-loki"],
       },
     ],
@@ -390,14 +385,14 @@ export const projects = [
     type: "live",
     img: "",
     description: "SMS management panel for bulk messaging and campaign guidance.",
-    techs: ["tech-js", "tech-node", "tech-kubernetes"],
+    techs: ["tech-js", "tech-node"],
     links: [],
     features: [
       {
         name: "Guidance",
         img: "",
         description: "Step-by-step guidance system for migrating the project to Kubernetes, including best practices and common pitfalls.",
-        techs: ["tech-node", "tech-kubernetes"],
+        techs: ["tech-node"],
       },
     ],
   },
@@ -407,14 +402,14 @@ export const projects = [
     type: "live",
     img: "",
     description: "Automated SMS response service for handling inbound messages with configurable reply logic.",
-    techs: ["tech-js", "tech-node", "tech-express"],
+    techs: ["tech-ts", "tech-node", "tech-express", "tech-mongodb", "tech-react-native"],
     links: [],
     features: [
       {
         name: "Whitelabel App Generator",
         img: "",
         description: "Panel for whitelabel distribution — takes custom app name, icon, and background as input, builds a branded APK in ~10 minutes, and provides a download link. Includes a distributor backend panel for tracking users under each whitelabel app distribution.",
-        techs: ["tech-node", "tech-react"],
+        techs: ["tech-node", "tech-react-native"],
       },
     ],
   },
@@ -426,7 +421,7 @@ export const experience = [
     company: "Admark Multiventures",
     role: "Lead / Senior Developer",
     duration: { start: "2024", end: "2026" },
-    description: "Promoted to Lead Developer after successful delivery of first project. Hired and led a team of 2 developers. Set up GitHub organization, repositories, domain system, and VPS infrastructure for backend, database, and deployment. Rebuilt previously outsourced services (Verified WhatsApp, SMS Panel) from scratch and delivered multiple new projects. Migrated the entire ecosystem to Kubernetes using existing VPSs to form the cluster, implemented fully automated CI/CD with ArgoCD + GitOps, transitioned containerized apps to centralized cloud storage, and set up app-specific Grafana dashboards with Prometheus metrics and Loki logs. Created migration documentation and ecosystem flowcharts. Completed full handover process.",
+    description: "Promoted to Lead Developer after successful delivery of first project. Hired and led a team of 2 additonal developers. Set up GitHub organization, repositories, domain system, and Multi-VPS infrastructure for backend, database, and deployment. Rebuilt previously outsourced services (@[Verified WhatsApp](project-2), @[SMS Panel](project-10)) from scratch and delivered multiple new projects. Migrated the entire ecosystem to @[Kubernetes](project-9) using existing VPSs to form the cluster, implemented fully automated CI/CD with ArgoCD + GitOps, transitioned containerized apps to centralized @[cloud storage](project-7), and set up app-specific Grafana dashboards with Prometheus metrics and Loki logs. Created migration documentation and ecosystem flowcharts. Completed full handover process.",
     techs: ["tech-js", "tech-ts", "tech-react", "tech-react-flow", "tech-node", "tech-express", "tech-mongodb", "tech-redis", "tech-go", "tech-postgres", "tech-docker", "tech-kubernetes", "tech-argocd", "tech-gitops", "tech-ghcr", "tech-grafana", "tech-prometheus", "tech-loki", "tech-nginx"],
   },
   {
@@ -434,7 +429,7 @@ export const experience = [
     company: "Admark Multiventures",
     role: "Full Stack Developer",
     duration: { start: "2024", end: "2024" },
-    description: "Hired as the company's first in-house developer. Built the Multi-WhatsApp automation platform from scratch, replacing a previously outsourced service with a fully featured in-house solution including chatbot flow builder, GenAI content variance, Chrome extension, and Razorpay integration.",
+    description: "Hired as the company's first in-house developer. Built the @[Multi-WhatsApp](project-1) automation platform from scratch, replacing a previously outsourced service with a fully featured in-house solution including chatbot flow builder, GenAI content variance, Chrome extension, and Razorpay integration.",
     techs: ["tech-js", "tech-react", "tech-react-flow", "tech-node", "tech-express", "tech-mongodb", "tech-plasmo", "tech-ts", "tech-genai", "tech-razorpay"],
   },
 ];
