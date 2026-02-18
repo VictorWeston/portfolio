@@ -337,7 +337,7 @@ export const projects = [
     name: "Kubernetes Ecosystem Migration",
     type: "live",
     img: "/icons/kubernetes.png",
-    description: "Full infrastructure migration to Kubernetes with containerized services, CI/CD pipelines, and a complete observability stack.",
+    description: "Full infrastructure migration to Kubernetes with containerized services, CI/CD pipelines, and a complete observability stack. Used Org's existing dedicated VPSs(bare metal) to form a Kubernetes cluster, migrated multiple services with zero downtime, and implemented automated CI/CD with ArgoCD and GitOps.",
     techs: ["tech-docker", "tech-kubernetes", "tech-argocd", "tech-gitops", "tech-ghcr", "tech-portainer", "tech-grafana", "tech-prometheus", "tech-loki", "tech-nginx"],
     links: [],
     features: [
@@ -362,7 +362,7 @@ export const projects = [
       {
         name: "Grafana",
         img: "",
-        description: "Centralized Grafana dashboards for monitoring all migrated services and infrastructure",
+        description: "Centralized Grafana dashboards for monitoring all migrated services and infrastructure. Also Monitor resource usage of all the VPSs in the cluster and set up custom dashboards for each service with relevant metrics and logs.",
         techs: ["tech-grafana"],
       },
       {
