@@ -1,18 +1,18 @@
 // Sample Portfolio Data - Replace with your actual data
 
 export const personalInfo = {
-  name: "John Doe",
-  title: "Full Stack Developer",
-  bio: "Passionate developer with 5+ years of experience building web applications.",
-  location: "San Francisco, CA",
-  email: "john@example.com",
-  phone: "+1 (555) 123-4567",
+  name: "Victor Yee",
+  title: "DevOps Engineer",
+  bio: "Passionate developer with 2+ years of live experience building and deploying applications and infrastructure.",
+  location: "Mumbai, India",
+  email: "victoryeestudio@gmail.com",
+  phone: "+91 9004809760",
   avatar: "",
 };
 
 export const quote = {
-  text: "The only way to do great work is to love what you do.",
-  author: "Steve Jobs",
+  text: "There are only two kinds of languages: the ones people complain about and the ones nobody uses.",
+  author: "Bjarne Stroustrup",
 };
 
 // Tech types: languages, frontend, backend, database, deployment, tools, integrations
@@ -80,7 +80,7 @@ export const projects = [
     id: "project-1",
     name: "Multi-Whatsapp",
     type: "live",
-    img: "",
+    img: "/images/mwhome.jpeg",
     description: "Multi-number WhatsApp Web Automation platform with chatbot automation, GenAI-powered content variance for bulk campaigns, Chrome extension, and payment integration.",
     techs: ["tech-js", "tech-react", "tech-react-flow", "tech-node", "tech-express", "tech-mongodb", "tech-plasmo", "tech-genai", "tech-razorpay", "tech-ts"],
     links: [],
@@ -115,7 +115,7 @@ export const projects = [
     id: "project-2",
     name: "Verified Whatsapp",
     type: "live",
-    img: "",
+    img: "/images/imagevw.png",
     description: "Enterprise-grade Verified WhatsApp(Blue tick) management platform with high-throughput campaigning, advanced chatbot flow builder, template management, Live Chat, multiple integrations, full observability stack.",
     techs: ["tech-js", "tech-react", "tech-react-flow", "tech-node", "tech-express", "tech-mongodb", "tech-postgres", "tech-redis", "tech-grafana", "tech-prometheus", "tech-loki", "tech-telecrm", "tech-shopify", "tech-calendly", "tech-google", "tech-tally", "tech-wordpress"],
     links: [],
@@ -128,7 +128,7 @@ export const projects = [
       },
       {
         name: "Feature Rich Chatbot Flow Builder",
-        img: "",
+        img: "/images/imagecb1.png",
         description: "Advanced visual chatbot flow builder with branching, conditions, rich media support and all supported WhatsApp message types, built using React Flow for intuitive drag-and-drop interface. An old election bot feature was removed due to Meta policy changes which had @[voters data](project-5) in a PostgreSQL database.",
         techs: ["tech-react", "tech-react-flow", "tech-js", "tech-postgres"],
       },
@@ -162,7 +162,7 @@ export const projects = [
     id: "project-3",
     name: "Admark CRM",
     type: "live",
-    img: "",
+    img: "/images/crmhome.png",
     description: "Customer relationship management system with quotation generation, Google Maps integration, call tracking, lead management, organization management and user monitoring.",
     techs: ["tech-js", "tech-react", "tech-node", "tech-express", "tech-mongodb", "tech-google", "tech-portainer"],
     links: [],
@@ -191,7 +191,7 @@ export const projects = [
     id: "project-4",
     name: "Admark CRM Mobile App",
     type: "live",
-    img: "",
+    img: "/images/ic_launcher.png",
     description: "Mobile CRM application with quotation generation, automated lead assignment, and comprehensive tracking for call, location, and screen time.",
     techs: ["tech-js", "tech-react-native", "tech-node", "tech-express", "tech-mongodb", "tech-genai"],
     links: [],
@@ -220,7 +220,7 @@ export const projects = [
     id: "project-5",
     name: "NAS Database Panel – Election Voters Database",
     type: "live",
-    img: "",
+    img: "/images/nasdbimport.png",
     description: "Data management panel for election voter databases with automated import and advanced multi-filter querying. Orignally NAS was being used to store the voters data in excel files and there was no database, I built a bulk data import system with folder-based file selection and automated parsing to streamline the process. The panel also features an advanced query interface supporting multiple simultaneous filters for voter data analysis. currently has 20M+ records.",
     techs: ["tech-js", "tech-react", "tech-node", "tech-express", "tech-postgres"],
     links: [],
@@ -243,7 +243,7 @@ export const projects = [
     id: "project-6",
     name: "Admark Payment Processor GO",
     type: "live",
-    img: "",
+    img: "/icons/razor.png",
     description: "High-performance payment processing service built in Go with Razorpay integration. Had implementations in in @[Multi-Whatsapp](project-1) and @[Verified WhatsApp](project-2) for handling all payment processing tasks including premium feature purchases and subscription management.",
     techs: ["tech-go", "tech-razorpay"],
     links: [],
@@ -260,7 +260,7 @@ export const projects = [
     id: "project-7",
     name: "GO Cloud Storage",
     type: "live",
-    img: "",
+    img: "/icons/go.png",
     description: "Cloud storage platform built in Go with RESTful API, dual authentication (JWT + API keys), hierarchical folder management with recursive path traversal, full-text search, virtual views (recent, starred), and comprehensive trash management with soft delete and restore. PostgreSQL-backed with optimized indexing and full user isolation.",
     techs: ["tech-go", "tech-postgres"],
     links: [],
@@ -301,7 +301,7 @@ export const projects = [
     id: "project-8",
     name: "Neta & Business Design – Admark",
     type: "live",
-    img: "",
+    img: "/icons/adda.png",
     description: "Mobile app for quick political banner creation with ready-to-use designs and frames, plus URL-based digital business cards and product catalogs for easy sharing. Backend powered by Node.js and Python for background removal.",
     techs: ["tech-python", "tech-js", "tech-react", "tech-node", "tech-express", "tech-ts", "tech-mongodb"],
     links: [],
@@ -336,7 +336,7 @@ export const projects = [
     id: "project-9",
     name: "Kubernetes Ecosystem Migration",
     type: "live",
-    img: "",
+    img: "/icons/kubernetes.png",
     description: "Full infrastructure migration to Kubernetes with containerized services, CI/CD pipelines, and a complete observability stack.",
     techs: ["tech-docker", "tech-kubernetes", "tech-argocd", "tech-gitops", "tech-ghcr", "tech-portainer", "tech-grafana", "tech-prometheus", "tech-loki", "tech-nginx"],
     links: [],
@@ -400,7 +400,7 @@ export const projects = [
     id: "project-11",
     name: "Auto SMS Responder",
     type: "live",
-    img: "",
+    img: "/images/auto.png",
     description: "Automated SMS response service for handling inbound messages with configurable reply logic.",
     techs: ["tech-ts", "tech-node", "tech-express", "tech-mongodb", "tech-react-native"],
     links: [],
@@ -435,23 +435,23 @@ export const experience = [
 ];
 
 export const hobbies = [
-  { id: "hobby-1", name: "Photography", icon: "/icons/photography.svg", description: "Capturing moments and landscapes" },
-  { id: "hobby-2", name: "Gaming", icon: "/icons/gaming.svg", description: "Strategy and puzzle games and a lot of theorycrafting" },
-  { id: "hobby-3", name: "Reading", icon: "/icons/reading.svg", description: "Tech blogs and sci-fi novels" },
+  { id: "hobby-1", name: "3D Modeling and Character Design", icon: "/icons/3d-modeling.svg", description: "Creating 3D models for characters and environments" },
+  { id: "hobby-2", name: "Gaming", icon: "/icons/gaming.svg", description: "Strategy and puzzle games and a lot of theorycrafting. Favorite titles: Satisfactory, Risk of Rain 2, Portal 2 and Silksong." },
+  { id: "hobby-3", name: "World Building", icon: "/icons/character-design.svg", description: "Designing and creating immersive worlds and narratives for game development projects" },
 ];
 
 export const passion = [
-  { id: "passion-1", name: "Open Source", description: "Contributing to open source projects", icon: "/icons/opensource.svg" },
-  { id: "passion-2", name: "Game Dev", description: "Creating and developing games", icon: "/icons/game-dev.svg" },
+  { id: "passion-1", name: "Game Dev", description: "Creating and developing games, crafting unique gameplay mechanics.", icon: "/icons/game-dev.svg" },
+  { id: "passion-2", name: "Procedural Generation", description: "Exploring algorithms and techniques for generating content dynamically.", icon: "/icons/automation.svg" },
 ];
 
 export const links = [
-  { id: "link-1", name: "Resume", url: "#", icon: "/icons/resume.svg" },
+  { id: "link-1", name: "Resume/CV", url: "#", icon: "/icons/resume.svg" },
   { id: "link-2", name: "Blog", url: "#", icon: "/icons/blog.svg" },
 ];
 
 export const socials = [
-  { id: "social-1", platform: "GitHub", url: "https://github.com", icon: "/icons/github.svg" },
+  { id: "social-1", platform: "GitHub", url: "https://github.com/VictorWeston ", icon: "/icons/github.svg" },
   { id: "social-2", platform: "LinkedIn", url: "https://linkedin.com", icon: "/icons/linkedin.svg" },
-  { id: "social-3", platform: "Twitter", url: "https://twitter.com", icon: "/icons/twitter.svg" },
+  { id: "social-3", platform: "WhatsApp", url: "https://wa.me/919004809760", icon: "/icons/whatsapp.svg" },
 ];

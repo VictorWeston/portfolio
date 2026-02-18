@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { techs, projects } from "../../data";
 import { useFilter } from "../../context/FilterContext";
 import Icon from "./Icon";
@@ -5,6 +6,7 @@ import CrossRefText from "./CrossRefText";
 
 function ProjectModal() {
   const { selectedTechs, activeProjectId, closeProject } = useFilter();
+  const [lightboxImg, setLightboxImg] = useState(null);
 
   if (!activeProjectId) return null;
 
@@ -70,12 +72,16 @@ function ProjectModal() {
                   const featureTechObjs = getFeatureTechs(feature.techs);
 
                   return (
-                    <li key={index} className="project-modal__feature">
-                      {feature.img && (
-                        <div className="project-modal__feature-image">
-                          <img src={feature.img} alt={feature.name} />
-                        </div>
-                      )}
+                    <li
+                      key={index}
+                      className={`project-modal__feature${feature.img ? ' project-modal__feature--clickable' : ''}`}
+                      onClick={(e) => {
+                        if (feature.img) {
+                          e.stopPropagation();
+                          setLightboxImg(feature.img);
+                        }
+                      }}
+                    >
                       <div className="project-modal__feature-content">
                         <strong>{feature.name}</strong>
                         {feature.description && (
@@ -128,6 +134,18 @@ function ProjectModal() {
           )}
         </div>
       </div>
+
+      {lightboxImg && (
+        <div
+          className="feature-lightbox-overlay"
+          onClick={(e) => {
+            e.stopPropagation();
+            setLightboxImg(null);
+          }}
+        >
+          <img src={lightboxImg} alt="Full view" onClick={(e) => e.stopPropagation()} />
+        </div>
+      )}
     </div>
   );
 }
