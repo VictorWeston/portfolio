@@ -334,7 +334,7 @@ export const projects = [
   },
   {
     id: "project-9",
-    name: "Kubernetes Ecosystem Migration",
+    name: "Kubernetes Ecosystem Migration (bare metal VPS Cluster)",
     type: "live",
     img: "/icons/kubernetes.png",
     description: "Full infrastructure migration to Kubernetes with containerized services, CI/CD pipelines, and a complete observability stack. Used Org's existing dedicated VPSs(bare metal) to form a Kubernetes cluster, migrated multiple services with zero downtime, and implemented automated CI/CD with ArgoCD and GitOps.",
