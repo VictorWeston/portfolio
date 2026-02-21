@@ -1,6 +1,7 @@
 import { techs } from "../../data";
 import { useFilter } from "../../context/FilterContext";
 import Icon from "./Icon";
+import CyclingImage from "./CyclingImage";
 
 function ProjectCard({ project }) {
   const { selectedTechs, openProject } = useFilter();
@@ -9,14 +10,16 @@ function ProjectCard({ project }) {
   // Get full tech objects from IDs
   const techObjects = techs.filter((t) => projectTechs.includes(t.id));
 
+  const hasImage = Array.isArray(img) ? img.length > 0 : !!img;
+
   return (
     <article 
       className="project-card"
       onClick={() => openProject(project.id)}
     >
       <div className="project-card__image">
-        {img ? (
-          <img src={img} alt={name} />
+        {hasImage ? (
+          <CyclingImage src={img} alt={name} />
         ) : (
           <div className="project-card__image-placeholder" />
         )}

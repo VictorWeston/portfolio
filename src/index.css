@@ -430,6 +430,52 @@ a:hover {
   background: #000;
 }
 
+/* Cycling Image */
+.cycling-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.cycling-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+  transition: opacity 0.3s ease;
+}
+
+.cycling-image--fade-out {
+  opacity: 0;
+}
+
+.cycling-image--fade-in {
+  opacity: 1;
+}
+
+.cycling-image__dots {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.35rem;
+  z-index: 3;
+}
+
+.cycling-image__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cycling-image__dot--active {
+  background: #fff;
+  transform: scale(1.3);
+}
+
 .project-card__image-placeholder {
   width: 100%;
   height: 100%;

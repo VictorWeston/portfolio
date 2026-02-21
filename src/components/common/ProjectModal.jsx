@@ -3,6 +3,7 @@ import { techs, projects } from "../../data";
 import { useFilter } from "../../context/FilterContext";
 import Icon from "./Icon";
 import CrossRefText from "./CrossRefText";
+import CyclingImage from "./CyclingImage";
 
 function ProjectModal() {
   const { selectedTechs, activeProjectId, closeProject } = useFilter();
@@ -29,9 +30,9 @@ function ProjectModal() {
           ×
         </button>
 
-        {img && (
+        {(Array.isArray(img) ? img.length > 0 : !!img) && (
           <div className="project-modal__image">
-            <img src={img} alt={name} />
+            <CyclingImage src={img} alt={name} />
           </div>
         )}
 

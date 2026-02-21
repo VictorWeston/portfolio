@@ -2,8 +2,8 @@
 
 export const personalInfo = {
   name: "Victor Yee",
-  title: "DevOps Engineer",
-  bio: "Passionate developer with 2+ years of live experience building and deploying applications and infrastructure.",
+  title: "Software Engineer",
+  bio: "Full-stack developer turned platform engineer. Built and shipped 10+ production services at scale, then migrated the entire ecosystem to Kubernetes and automated the onboarding of new projects to the cluster.",
   location: "Mumbai, India",
   email: "victoryeestudio@gmail.com",
   phone: "+91 9004809760",
@@ -33,6 +33,7 @@ export const techs = [
   // Backend
   { id: "tech-node", name: "Node.js", type: "backend", icon: "/icons/nodejs.png" },
   { id: "tech-express", name: "Express", type: "backend", icon: "/icons/express.png" },
+  { id: "tech-fastapi", name: "FastAPI", type: "backend", icon: "/icons/FastAPI.png" },
   
   // Database
   { id: "tech-mongodb", name: "MongoDB", type: "database", icon: "/icons/mongodb.png" },
@@ -46,12 +47,15 @@ export const techs = [
   { id: "tech-gitops", name: "GitOps", type: "deployment", icon: "/icons/github.png" },
   { id: "tech-ghcr", name: "GHCR", type: "deployment", icon: "/icons/gitactions.png" },
   { id: "tech-portainer", name: "Portainer", type: "deployment", icon: "/icons/portainer.png" },
+  { id: "tech-helm", name: "Helm", type: "deployment", icon: "/icons/Helm.png" },
   
   // Tools
   { id: "tech-grafana", name: "Grafana", type: "tools", icon: "/icons/grafana.png" },
   { id: "tech-prometheus", name: "Prometheus", type: "tools", icon: "/icons/prometheus.png" },
   { id: "tech-loki", name: "Loki", type: "tools", icon: "/icons/loki.png" },
   { id: "tech-nginx", name: "Nginx", type: "tools", icon: "/icons/nginx.png" },
+  { id: "tech-blender", name: "Blender API", type: "tools", icon: "/icons/blender.png" },
+  { id: "tech-git-api", name: "Git API", type: "tools", icon: "/icons/github.png" },
   
   // Integrations
   { id: "tech-telecrm", name: "TeleCRM", type: "integrations", icon: "/icons/telecrm.png" },
@@ -78,12 +82,12 @@ export const techTypes = {
 export const projects = [
   {
     id: "project-1",
-    name: "Multi-Whatsapp",
+    name: "Multi-Whatsapp -Admark",
     type: "live",
-    img: "/images/mwhome.jpeg",
+    img: "/icons/whatsapp.png",
     description: "Multi-number WhatsApp Web Automation platform with chatbot automation, GenAI-powered content variance for bulk campaigns, Chrome extension, and payment integration.",
     techs: ["tech-js", "tech-react", "tech-react-flow", "tech-node", "tech-express", "tech-mongodb", "tech-plasmo", "tech-genai", "tech-razorpay", "tech-ts"],
-    links: [],
+    links: [{label: "Live Site", url: "https://multiwhatsapp.admarksolution.com"}],
     features: [
       {
         name: "Simple Chatbot + Chatbot Flow Creator",
@@ -113,12 +117,12 @@ export const projects = [
   },
   {
     id: "project-2",
-    name: "Verified Whatsapp",
+    name: "Verified Whatsapp -Admark",
     type: "live",
-    img: "/images/imagevw.png",
+    img: "/icons/verified.png",
     description: "Enterprise-grade Verified WhatsApp(Blue tick) management platform with high-throughput campaigning, advanced chatbot flow builder, template management, Live Chat, multiple integrations, full observability stack.",
     techs: ["tech-js", "tech-react", "tech-react-flow", "tech-node", "tech-express", "tech-mongodb", "tech-postgres", "tech-redis", "tech-grafana", "tech-prometheus", "tech-loki", "tech-telecrm", "tech-shopify", "tech-calendly", "tech-google", "tech-tally", "tech-wordpress"],
-    links: [],
+    links: [{label: "Live Site", url: "https://verifiedwhatsapp.admarksolution.com"}],
     features: [
       {
         name: "High Threshold Campaigning & Webhook Handling",
@@ -162,10 +166,10 @@ export const projects = [
     id: "project-3",
     name: "Admark CRM",
     type: "live",
-    img: "/images/crmhome.png",
+    img: "/icons/crm.png",
     description: "Customer relationship management system with quotation generation, Google Maps integration, call tracking, lead management, organization management and user monitoring.",
     techs: ["tech-js", "tech-react", "tech-node", "tech-express", "tech-mongodb", "tech-google", "tech-portainer"],
-    links: [],
+    links: [{label: "Live Site", url: "https://crm.admarksolution.com"}],
     features: [
       {
         name: "Quotation Generator",
@@ -176,7 +180,7 @@ export const projects = [
       {
         name: "Google Maps API",
         img: "",
-        description: "Location-based features powered by Google Maps API for client and lead management. Feautures live agent location tracking, agent route history, visit markers and login location tracking.",
+        description: "Location-based features powered by Google Maps API for client and lead management. Features live agent location tracking, agent route history, visit markers and login location tracking.",
         techs: ["tech-google", "tech-js", "tech-react", "tech-node"],
       },
       {
@@ -220,8 +224,8 @@ export const projects = [
     id: "project-5",
     name: "NAS Database Panel – Election Voters Database",
     type: "live",
-    img: "/images/nasdbimport.png",
-    description: "Data management panel for election voter databases with automated import and advanced multi-filter querying. Orignally NAS was being used to store the voters data in excel files and there was no database, I built a bulk data import system with folder-based file selection and automated parsing to streamline the process. The panel also features an advanced query interface supporting multiple simultaneous filters for voter data analysis. currently has 20M+ records.",
+    img: "/icons/postgresql.png",
+    description: "Data management panel for election voter databases with automated import and advanced multi-filter querying. Originally NAS was being used to store the voters data in excel files and there was no database, I built a bulk data import system with folder-based file selection and automated parsing to streamline the process. The panel also features an advanced query interface supporting multiple simultaneous filters for voter data analysis. currently has 20M+ records.",
     techs: ["tech-js", "tech-react", "tech-node", "tech-express", "tech-postgres"],
     links: [],
     features: [
@@ -261,9 +265,9 @@ export const projects = [
     name: "GO Cloud Storage",
     type: "live",
     img: "/icons/go.png",
-    description: "Cloud storage platform built in Go with RESTful API, dual authentication (JWT + API keys), hierarchical folder management with recursive path traversal, full-text search, virtual views (recent, starred), and comprehensive trash management with soft delete and restore. PostgreSQL-backed with optimized indexing and full user isolation.",
+    description: "Cloud storage platform built in Go with RESTful API, dual authentication (JWT + API keys), hierarchical folder management with recursive path traversal, full-text search, virtual views (recent, starred), and comprehensive trash management with soft delete and restore. PostgreSQL-backed with optimized indexing and full user isolation. After the @[Kubernetes ecosystem migration](project-9), this is the main source of truth for file storage across all apps and projects in the cluster.",
     techs: ["tech-go", "tech-postgres"],
-    links: [],
+    links: [{label: "Public Repo", url: "https://github.com/VictorWeston/GO-Cloud-Storage-Service-Public.git"}],
     features: [
       {
         name: "File & Folder Management",
@@ -337,14 +341,14 @@ export const projects = [
     name: "Kubernetes Ecosystem Migration (bare metal VPS Cluster)",
     type: "live",
     img: "/icons/kubernetes.png",
-    description: "Full infrastructure migration to Kubernetes with containerized services, CI/CD pipelines, and a complete observability stack. Used Org's existing dedicated VPSs(bare metal) to form a Kubernetes cluster, migrated multiple services with zero downtime, and implemented automated CI/CD with ArgoCD and GitOps.",
+    description: "Full infrastructure migration to Kubernetes with containerized services, CI/CD pipelines, and a complete observability stack. Used Org's existing dedicated VPSs(bare metal) to form a Kubernetes cluster, migrated multiple services with zero downtime, and implemented automated CI/CD with ArgoCD and GitOps. current ecosytem(02/2026) has 7 VPSs(Hetzner), 4 in cluster as worker nodes and 3 for external services like database and storage. The cluster runs 10+ production services including all the projects mentioned here and more, with a full monitoring stack using Grafana, Prometheus, and Loki.",
     techs: ["tech-docker", "tech-kubernetes", "tech-argocd", "tech-gitops", "tech-ghcr", "tech-portainer", "tech-grafana", "tech-prometheus", "tech-loki", "tech-nginx"],
     links: [],
     features: [
       {
         name: "Migrated Projects",
         img: "",
-        description: "Containerized and migrated @[Verified WhatsApp](project-2), @[Admark CRM](project-3), Admark Website, and @[Bulk-SMS Panel](project-10) to Kubernetes with zero-downtime deployments via ArgoCD and GitOps CI/CD pipelines.",
+        description: "Containerized and migrated @[Verified WhatsApp](project-2), @[Admark CRM](project-3), Admark Website, and Bulk-SMS Panel to Kubernetes with zero-downtime deployments via ArgoCD and GitOps CI/CD pipelines.",
         techs: ["tech-docker", "tech-kubernetes", "tech-argocd", "tech-gitops", "tech-ghcr", "tech-nginx"],
       },
       {
@@ -377,25 +381,15 @@ export const projects = [
         description: "Log aggregation with Loki for centralized logging across all services. Project @[Verified WhatsApp](project-2) has custom log streams for webhook events and API calls.",
         techs: ["tech-loki"],
       },
-    ],
-  },
-  {
-    id: "project-10",
-    name: "SMS Panel Admark",
-    type: "live",
-    img: "",
-    description: "SMS management panel for bulk messaging and campaign guidance.",
-    techs: ["tech-js", "tech-node"],
-    links: [],
-    features: [
       {
-        name: "Guidance",
+        name: "Namespace Isolation & RBAC",
         img: "",
-        description: "Step-by-step guidance system for migrating the project to Kubernetes, including best practices and common pitfalls.",
-        techs: ["tech-node"],
+        description: "Configured namespace-level isolation per service with Kubernetes RBAC policies for access control. Service accounts scoped per namespace to enforce least-privilege across the cluster.",
+        techs: ["tech-kubernetes"],
       },
     ],
   },
+
   {
     id: "project-11",
     name: "Auto SMS Responder",
@@ -413,6 +407,76 @@ export const projects = [
       },
     ],
   },
+  {
+    id: "project-12",
+    name: "Automated Migration Platform",
+    type: "live",
+    img: "/icons/kubernetes.png",
+    description: "After manually migrating multiple projects to the @[Kubernetes ecosystem](project-9), built an internal developer platform that provides a golden path for onboarding services to the cluster. A FastAPI backend and React frontend \u2014 developers input project details through a self-service UI, the platform generates a universal Helm chart values file, ArgoCD Application manifests, and GitHub Actions workflows with timestamp-based versioning, then clones the target repo, commits all generated files, and pushes \u2014 triggering the full CI/CD pipeline automatically. Eliminated manual migration entirely, reducing project onboarding from days of infrastructure work to minutes with zero dependency on platform team availability.",
+    techs: ["tech-python", "tech-fastapi", "tech-js", "tech-react", "tech-docker", "tech-kubernetes", "tech-helm", "tech-argocd", "tech-gitops", "tech-ghcr", "tech-nginx"],
+    links: [],
+    features: [
+      {
+        name: "Universal Helm Chart",
+        img: "",
+        description: "Flexible Helm chart supporting single and multi-deployment projects with automatic namespace creation, nginx ingress with TLS via cert-manager, image pull secrets, configurable resource limits, liveness/readiness probes, horizontal pod autoscaling (HPA), ConfigMaps and Secrets management. Designed as a one-chart-fits-all solution so every service in the cluster uses the same deployment pattern.",
+        techs: ["tech-helm", "tech-kubernetes", "tech-nginx"],
+      },
+      {
+        name: "Automated Domain Pointing & TLS",
+        img: "",
+        description: "Automates subdomain pointing using Cloudflare API token and SSL certificate generation via cert-manager with Let's Encrypt. When developers input their hostname, the platform configures the ingress to route to the correct service and automatically provisions and renews TLS certificates for HTTPS access.",
+        techs: ["tech-nginx", "tech-kubernetes"],
+      },
+      {
+        name: "FastAPI Config Generator",
+        img: "",
+        description: "Python FastAPI backend with endpoints for generating Helm values.yaml, ArgoCD Application manifests, and GitHub Actions workflow files. Supports single and multi-deployment projects with per-deployment image repositories, contexts, and container ports. Includes repo validation and deployment templates API. Generates workflows with timestamp-based versioning (YYYYMMDDHHMMSS-gitsha7) and automatic Helm values image tag updates for GitOps integration.",
+        techs: ["tech-python", "tech-fastapi"],
+      },
+      {
+        name: "Self-Service UI",
+        img: "",
+        description: "React frontend where developers configure their project through a guided form — project name, namespace, repo URL, image registry, hostname, container port, deployment type (single/multi), and environment variables. Includes setup tab for chart repo configuration, live preview of generated files before committing, and deployment template selection.",
+        techs: ["tech-react", "tech-js"],
+      },
+      {
+        name: "Automated Repo Deploy",
+        img: "",
+        description: "Deploy-to-repo endpoint that clones the target repository using authenticated HTTPS, generates all configuration files (values.yaml, ArgoCD app, GitHub workflow), commits them to the repo, and pushes — triggering the existing @[ArgoCD + GitOps CI/CD pipeline](project-9). Git tokens are never stored and cloned repos use temporary directories that are cleaned up after use.",
+        techs: ["tech-gitops", "tech-ghcr", "tech-argocd", "tech-python"],
+      },
+    ],
+  },
+  {
+    id: "project-13",
+    name: "Commit History Visualizer",
+    type: "personal",
+    img: "/images/commits.gif",
+    description: "Fetches your GitHub contribution data via the GraphQL API and renders it as an animated 3D tower visualization using Blender. Each day maps to a cube whose height represents commit count, with a camera orbit animation exported as a GIF. Automatically updates daily via GitHub Actions and commits the GIF back to the repo for use in the GitHub profile README.",
+    techs: ["tech-python", "tech-git-api", "tech-blender", "tech-docker"],
+    links: [{label: "GitHub Repository", url: "https://github.com/VictorWeston/commit-history-visualizer.git"}],
+    features: [
+      {
+        name: "GitHub GraphQL Data Fetcher",
+        img: "",
+        description: "Fetches 365 days of contribution calendar data from GitHub's GraphQL API using a personal access token. Supports mock data generation for local testing and development without needing API access.",
+        techs: ["tech-python", "tech-git-api"],
+      },
+      {
+        name: "Blender 3D Render Pipeline",
+        img: "",
+        description: "Programmatically generates a 3D grid of cubes in Blender where height equals commit count, with an orbiting camera animation. Configurable render samples, frame count, and resolution. Frames are compiled into an animated GIF via ffmpeg.",
+        techs: ["tech-python", "tech-blender"],
+      },
+      {
+        name: "Dockerized Pipeline",
+        img: "",
+        description: "Full pipeline containerized with Docker \u2014 supports fetch, render, GIF export, and a complete end-to-end run via CLI commands. Dev and production Dockerfiles with volume-mounted output for local development.",
+        techs: ["tech-python", "tech-docker"],
+      },
+    ],
+  },
 ];
 
 export const experience = [
@@ -421,7 +485,7 @@ export const experience = [
     company: "Admark Multiventures",
     role: "Lead / Senior Developer",
     duration: { start: "2024", end: "2026" },
-    description: "Promoted to Lead Developer after successful delivery of first project. Hired and led a team of 2 additonal developers. Set up GitHub organization, repositories, domain system, and Multi-VPS infrastructure for backend, database, and deployment. Rebuilt previously outsourced services (@[Verified WhatsApp](project-2), @[SMS Panel](project-10)) from scratch and delivered multiple new projects. Migrated the entire ecosystem to @[Kubernetes](project-9) using existing VPSs to form the cluster, implemented fully automated CI/CD with ArgoCD + GitOps, transitioned containerized apps to centralized @[cloud storage](project-7), and set up app-specific Grafana dashboards with Prometheus metrics and Loki logs. Created migration documentation and ecosystem flowcharts. Completed full handover process.",
+    description: "Promoted to Lead Developer after successful delivery of first project. Hired and led a team of 2 additional developers. Set up GitHub organization, repositories, domain system, and Multi-VPS infrastructure for backend, database, and deployment. Rebuilt previously outsourced services (@[Verified WhatsApp](project-2), SMS Panel) from scratch and delivered multiple new projects. Migrated the entire ecosystem to @[Kubernetes](project-9) using existing VPSs to form the cluster — reduced deployments from manual SSH to automated CI/CD under 2 minutes. Implemented ArgoCD + GitOps pipelines, transitioned containerized apps to centralized @[cloud storage](project-7), and set up app-specific Grafana dashboards with Prometheus metrics and Loki logs. Built the @[Automated Migration Platform](project-12) establishing a golden path for onboarding new services. Created migration documentation and ecosystem flowcharts. Completed full handover process.",
     techs: ["tech-js", "tech-ts", "tech-react", "tech-react-flow", "tech-node", "tech-express", "tech-mongodb", "tech-redis", "tech-go", "tech-postgres", "tech-docker", "tech-kubernetes", "tech-argocd", "tech-gitops", "tech-ghcr", "tech-grafana", "tech-prometheus", "tech-loki", "tech-nginx"],
   },
   {
