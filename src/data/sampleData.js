@@ -56,6 +56,7 @@ export const techs = [
   { id: "tech-nginx", name: "Nginx", type: "tools", icon: "/icons/nginx.png" },
   { id: "tech-blender", name: "Blender API", type: "tools", icon: "/icons/blender.png" },
   { id: "tech-git-api", name: "Git API", type: "tools", icon: "/icons/github.png" },
+  { id: "tech-raylib", name: "Raylib", type: "tools", icon: "/icons/raylib.png" },
   
   // Integrations
   { id: "tech-telecrm", name: "TeleCRM", type: "integrations", icon: "/icons/telecrm.png" },
@@ -104,7 +105,7 @@ export const projects = [
       {
         name: "Chrome Extension",
         img: "",
-        description: "Browser extension built for users with flagged WhatsApp Web sessions to bypass restrictions and continue using the platform seamlessly, user can use the extension to run the automation and api from their own browser session without any restrictions",
+        description: "Browser extension built using @[WhatsApp WS Extension Gateway](project-14) for users with flagged WhatsApp Web sessions to bypass restrictions and continue using the platform seamlessly. The extension connects to the gateway server via WebSocket for message routing and session management, allowing users to run the automation and API from their own browser session without any restrictions.",
         techs: ["tech-plasmo", "tech-ts", "tech-react"],
       },
       {
@@ -477,6 +478,90 @@ export const projects = [
       },
     ],
   },
+  {
+    id: "project-14",
+    name: "WhatsApp WebSocket Extension Gateway",
+    type: "personal",
+    img: "/icons/whatsapp.png",
+    description: "Production-ready NPM package that provides a WebSocket gateway server for automating WhatsApp through Chrome extensions. Handles WebSocket connections, API key authentication with pluggable validators (MongoDB, PostgreSQL, JWT), multi-device message routing with round-robin or random selection, and media sending with automatic URL-to-DataURL conversion. Built as a standalone package after extracting and generalizing the gateway logic from @[Multi-WhatsApp](project-1)'s Chrome extension infrastructure. Used as a core dependency in the @[Multi-WhatsApp](project-1) platform. Published on npm with full TypeScript definitions and Express middleware support.",
+    techs: ["tech-js", "tech-ts", "tech-node", "tech-express"],
+    links: [
+      {label: "NPM Package", url: "https://www.npmjs.com/package/whatsapp-ws-extension-gateway"},
+      {label: "GitHub Repository", url: "https://github.com/VictorWeston/whatsapp-ws-extension-gateway"}
+    ],
+    features: [
+      {
+        name: "WebSocket Gateway & Session Management",
+        img: "",
+        description: "WebSocket server with configurable route path, API key authentication via user-provided async validators (supports MongoDB, PostgreSQL, JWT, or custom), automatic heartbeat monitoring with stale session cleanup, and per-API-key session tracking with configurable max sessions. Supports HTTPS/WSS for production deployments.",
+        techs: ["tech-node", "tech-js"],
+      },
+      {
+        name: "Multi-Device Message Routing",
+        img: "",
+        description: "Supports multiple Chrome extension connections per API key with round-robin or random device selection strategies. Promise-based send operations with configurable timeouts, bulk messaging support, and comprehensive error handling with typed error codes (NO_ACTIVE_DEVICE, REQUEST_TIMEOUT, CONNECTION_LOST, etc.).",
+        techs: ["tech-node", "tech-js"],
+      },
+      {
+        name: "Media Handling & Auto-Conversion",
+        img: "",
+        description: "Send images, videos, and documents with automatic URL-to-DataURL conversion. Accepts file paths, HTTP URLs, or raw DataURLs as input and handles conversion transparently. Includes file size validation (10MB limit) and optional captions for all media types.",
+        techs: ["tech-node", "tech-js"],
+      },
+      {
+        name: "Express & TypeScript Support",
+        img: "",
+        description: "Attaches to an existing Express HTTP server via shared http.Server instance or runs standalone on a configurable port. Ships with full TypeScript type definitions (GatewayConfig, SendMessageData, MessageResult, SessionInfo). Includes an interactive CLI test server and a complete Chrome extension integration guide with WebSocket protocol documentation.",
+        techs: ["tech-node", "tech-express", "tech-ts"],
+      },
+    ],
+  },
+  {
+    id: "project-15",
+    name: "Goals Bingo",
+    type: "personal",
+    img: "/icons/react.png",
+    description: "Simple React Native app to create your own yearly goals Bingo card. Pick your goals, shuffle them onto a 5x5 grid, and check them off throughout the year. Pre-built APK available for direct Android install.",
+    techs: ["tech-js", "tech-react-native"],
+    links: [{label: "GitHub Repository", url: "https://github.com/VictorWeston/Year-Bingo-Mobile"}],
+    features: [
+      {
+        name: "Bingo Card Generator",
+        img: "",
+        description: "Create a personalized 5x5 Bingo grid from your own list of yearly goals. Goals are shuffled randomly onto the card with a free center space. Tap to mark goals as completed throughout the year.",
+        techs: ["tech-react-native", "tech-js"],
+      },
+    ],
+  },
+  {
+    id: "project-16",
+    name: "Domain Generator Prototype",
+    type: "personal",
+    img: "/icons/raylib.png",
+    description: "A learning project exploring tile-based procedural generation. 2D top-down domain generator prototype built with C# and Raylib, using socket-based room placement and target-based pathfinding to connect rooms via corridors. Room templates are defined in JSON with customizable shapes, sockets, and colors.",
+    techs: ["tech-csharp", "tech-raylib"],
+    links: [{label: "GitHub Repository", url: "https://github.com/VictorWeston/Domain-Gen-Prototype"}],
+    features: [
+      {
+        name: "Procedural Room Placement",
+        img: "",
+        description: "Socket-based procedural generation system that places rooms on a tile grid using matching socket connections. Room templates defined in JSON with configurable shapes, socket positions, and colors. Supports regeneration on the fly.",
+        techs: ["tech-csharp", "tech-raylib"],
+      },
+      {
+        name: "Target-Based Pathfinding",
+        img: "",
+        description: "Corridor generation using target-based pathfinding to connect placed rooms through their socket points. Ensures all rooms are reachable within the generated domain.",
+        techs: ["tech-csharp"],
+      },
+      {
+        name: "Interactive Visualization",
+        img: "",
+        description: "Real-time 2D visualization with Raylib featuring right-click camera panning, mouse wheel zoom, and instant regeneration with the R key. Visual debugging of the generated tile grid, room boundaries, and corridor paths.",
+        techs: ["tech-csharp", "tech-raylib"],
+      },
+    ],
+  },
 ];
 
 export const experience = [
@@ -485,7 +570,7 @@ export const experience = [
     company: "Admark Multiventures",
     role: "Lead / Senior Developer",
     duration: { start: "2024", end: "2026" },
-    description: "Promoted to Lead Developer after successful delivery of first project. Hired and led a team of 2 additional developers. Set up GitHub organization, repositories, domain system, and Multi-VPS infrastructure for backend, database, and deployment. Rebuilt previously outsourced services (@[Verified WhatsApp](project-2), SMS Panel) from scratch and delivered multiple new projects. Migrated the entire ecosystem to @[Kubernetes](project-9) using existing VPSs to form the cluster — reduced deployments from manual SSH to automated CI/CD under 2 minutes. Implemented ArgoCD + GitOps pipelines, transitioned containerized apps to centralized @[cloud storage](project-7), and set up app-specific Grafana dashboards with Prometheus metrics and Loki logs. Built the @[Automated Migration Platform](project-12) establishing a golden path for onboarding new services. Created migration documentation and ecosystem flowcharts. Completed full handover process.",
+    description: "Promoted to Lead Developer after successful delivery of first project. Hired and led a team of 3 developers. Set up GitHub organization, repositories, domain system, and Multi-VPS infrastructure for backend, database, and deployment. Rebuilt previously outsourced services (@[Verified WhatsApp](project-2), SMS Panel) from scratch and delivered multiple new projects. Migrated the entire ecosystem to @[Kubernetes](project-9) using existing VPSs to form the cluster — reduced deployments from manual SSH to automated CI/CD under 2 minutes. Implemented ArgoCD + GitOps pipelines, transitioned containerized apps to centralized @[cloud storage](project-7), and set up app-specific Grafana dashboards with Prometheus metrics and Loki logs. Built the @[Automated Migration Platform](project-12) establishing a golden path for onboarding new services. Created migration documentation and ecosystem flowcharts. Completed full handover process.",
     techs: ["tech-js", "tech-ts", "tech-react", "tech-react-flow", "tech-node", "tech-express", "tech-mongodb", "tech-redis", "tech-go", "tech-postgres", "tech-docker", "tech-kubernetes", "tech-argocd", "tech-gitops", "tech-ghcr", "tech-grafana", "tech-prometheus", "tech-loki", "tech-nginx"],
   },
   {
