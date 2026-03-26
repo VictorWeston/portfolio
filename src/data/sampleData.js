@@ -584,23 +584,23 @@ export const experience = [
 ];
 
 export const hobbies = [
-  { id: "hobby-1", name: "3D Modeling and Character Design", icon: "/icons/3d-modeling.svg", description: "Creating 3D models for characters and environments" },
-  { id: "hobby-2", name: "Gaming", icon: "/icons/gaming.svg", description: "Strategy and puzzle games and a lot of theorycrafting. Favorite titles: Satisfactory, Risk of Rain 2, Portal 2 and Silksong." },
-  { id: "hobby-3", name: "World Building", icon: "/icons/character-design.svg", description: "Designing and creating immersive worlds and narratives for game development projects" },
+  { id: "hobby-1", name: "3D Modeling and Character Design", icon: "/icons/blender.png", description: "Creating 3D models for characters. Scuplting, texturing, rigging & animating characters to be used in game engines" },
+  { id: "hobby-2", name: "Gaming", icon: "/icons/steam.png", description: "Strategy and puzzle games and a lot of theorycrafting. Favorite titles: Satisfactory, Risk of Rain 2, Portal 2 and Silksong." },
+  { id: "hobby-3", name: "World Building", icon: "/icons/earth.png", description: "Designing and creating immersive and complex worlds and narratives for game development projects" },
 ];
 
 export const passion = [
-  { id: "passion-1", name: "Game Dev", description: "Creating and developing games, crafting unique gameplay mechanics.", icon: "/icons/game-dev.svg" },
-  { id: "passion-2", name: "Procedural Generation", description: "Exploring algorithms and techniques for generating content dynamically.", icon: "/icons/automation.svg" },
+  { id: "passion-1", name: "Game Dev", description: "Creating and developing games, crafting unique gameplay mechanics and power systems.", icon: "/icons/unity.png" },
+  { id: "passion-2", name: "Procedural Generation", description: "Exploring algorithms and techniques for generating content dynamically.", icon: "/icons/raylib.png" },
 ];
 
 export const links = [
-  { id: "link-1", name: "Resume/CV", url: "#", icon: "/icons/resume.svg" },
-  { id: "link-2", name: "Blog", url: "#", icon: "/icons/blog.svg" },
+  { id: "link-1", name: "Resume/CV", url: "#", icon: "/icons/github.png" },
+  { id: "link-2", name: "Site", url: "#", icon: "/icons/earth.png" },
 ];
 
 export const socials = [
-  { id: "social-1", platform: "GitHub", url: "https://github.com/VictorWeston ", icon: "/icons/github.svg" },
-  { id: "social-2", platform: "LinkedIn", url: "https://linkedin.com", icon: "/icons/linkedin.svg" },
-  { id: "social-3", platform: "WhatsApp", url: "https://wa.me/919004809760", icon: "/icons/whatsapp.svg" },
+  { id: "social-1", platform: "GitHub", url: "https://github.com/VictorWeston ", icon: "/icons/github.png" },
+  { id: "social-2", platform: "LinkedIn", url: "https://linkedin.com", icon: "/icons/link.png" },
+  { id: "social-3", platform: "WhatsApp", url: "https://wa.me/919004809760", icon: "/icons/whatsapp.png" },
 ];
