@@ -7,7 +7,7 @@ export const personalInfo = {
   location: "Mumbai, India",
   email: "victoryeestudio@gmail.com",
   phone: "+91 9004809760",
-  avatar: "",
+  avatar: "/icons/profile.png",
 };
 
 export const quote = {
